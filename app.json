@@ -2,6 +2,6 @@
   "name": "browser-calls-laravel",
   "description": "This Laravel web application shows how you can use Twilio Client to make browser-to-phone and browser-to-browser calls.",
   "repository": "https://github.com/WevrLabs/browser-calls-laravel",
-  "logo": "https://node-js-sample.herokuapp.com/node.png",
+  "logo": "https://www.twilio.com/docs/static/img/twilio-logo.svg",
   "keywords": ["node", "express", "static"]
 }
