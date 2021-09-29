@@ -19,8 +19,8 @@ class AppServiceProvider extends ServiceProvider
             AccessToken::class,
             function ($app) {
                 $accountSid = config('services.twilio')['accountSid'];
-                $apiKey = config('services.twilio')['apiKey'];
-                $apiSecret = config('services.twilio')['apiSecret'];
+                $apiKey     = config('services.twilio')['apiKey'];
+                $apiSecret  = config('services.twilio')['apiSecret'];
 
                 return new AccessToken($accountSid, $apiKey, $apiSecret, 3600, 'identity');
             }
@@ -35,6 +35,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        if ($this->app->environment('production')) {
+            \URL::forceScheme('https');
+        }
     }
 }
